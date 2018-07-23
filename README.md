@@ -5,5 +5,5 @@ Configurations and Services
 * Virtual Box
 	- __Configuration File to setup CoreOS within Virtualbox__
 	- ```bash
-	sudo coreos-install -d /dev/sda -C stable -c cloud-init.yaml 
+	sudo coreos-install -d /dev/sda -C stable -c cloud-config.yaml 
 	```
