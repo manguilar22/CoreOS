@@ -1,0 +1,18 @@
+#Cloud-Config File 
+# Defualt Password ~> Aguilar 
+
+users:
+        -name: core
+        passwd: 3ula8srWlDc1ywOWdwv51
+        groups:
+                -wheel
+                -docker
+                -fleet  #May be deprecated (July 23,2018) 
+                -rkt
+        -name: user
+        passwd: 3ula8srWlDc1ywOWdwv51
+        groups:
+                -wheel
+                -docker
+                -fleet
+                -rkt
