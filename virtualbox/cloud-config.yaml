@@ -3,14 +3,14 @@
 
 users:
         -name: core
-        passwd: 3ula8srWlDc1ywOWdwv51
+        passwd: $1$8QrwgvPU$tqFPKWsqoq967.6NCYxsn/
         groups:
                 -wheel
                 -docker
                 -fleet  #May be deprecated (July 23,2018) 
                 -rkt
         -name: user
-        passwd: 3ula8srWlDc1ywOWdwv51
+        passwd: $1$8QrwgvPU$tqFPKWsqoq967.6NCYxsn/
         groups:
                 -wheel
                 -docker
