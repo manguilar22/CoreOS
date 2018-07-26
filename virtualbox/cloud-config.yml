@@ -1,18 +1,18 @@
 #cloud-config
 # Default Password ~> Aguilar
 
-  users:
+users:
   - name: core
-    password_hash: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
+    passwd: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
     groups: 
-    - wheel
-    - docker
-    - fleet
-    - rkt
+    - "wheel"
+    - "docker"
+    - "fleet"
+    - "rkt"
   - name: user
-    password_hash: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
+    passwd: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
     groups:
-    - wheel
-    - docker
-    - fleet
-    - rkt
+    - "wheel"
+    - "docker"
+    - "fleet"
+    - "rkt"
