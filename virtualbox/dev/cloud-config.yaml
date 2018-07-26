@@ -1,0 +1,21 @@
+#cloud-config
+#Default Password ~> Aguilar
+passwd:
+        users:
+         - name: user
+           password_hash: "$1$@dsj-bas$EFbf/RgZDB2kFfnjR9.m00"
+           groups:
+            - wheel
+            - docker 
+            - rkt
+            - fleet
+           shell: /bin/bash       
+         - name: core
+           password_hash: "$1$@dsj-bas$EFbf/RgZDB2kFfnjR9.m00"
+           groups:
+            - wheel 
+            - docker
+            - rkt 
+            - fleet
+           shell: /bin/bash       
+              
