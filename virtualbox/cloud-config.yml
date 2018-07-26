@@ -2,14 +2,14 @@
 # Default Password ~> Aguilar
 
 users:
-  - name: core
+  - name: "core"
     passwd: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
     groups: 
     - "wheel"
     - "docker"
     - "fleet"
     - "rkt"
-  - name: user
+  - name: "user"
     passwd: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
     groups:
     - "wheel"
