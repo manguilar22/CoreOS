@@ -3,14 +3,14 @@
 
   users:
   - name: core
-    passwd: rkt$1$pBhUl9Ny$cWMsa.O8mvBonvxJfSQDc0
+    password_hash: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
     groups: 
     - wheel
     - docker
     - fleet
     - rkt
   - name: user
-    passwd: rkt$1$pBhUl9Ny$cWMsa.O8mvBonvxJfSQDc0
+    password_hash: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
     groups:
     - wheel
     - docker
