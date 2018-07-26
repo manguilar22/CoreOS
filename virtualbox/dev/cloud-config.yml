@@ -1,0 +1,22 @@
+#cloud-config
+
+#Default Password ~> Aguilar
+
+hostname: "coreos"
+users:
+  - name: "core"
+    passwd: "$1$@dsj-bas$EFbf/RgZDB2kFfnjR9.m00"
+    groups:
+      - "sudo"
+      - "docker"
+      - "rkt"
+      - "fleet"
+    shell: /usr/bin/bash
+  - name: "user"
+    passwd: "$1$@dsj-bas$EFbf/RgZDB2kFfnjR9.m00"
+    groups:
+      - "sudo"
+      - "docker"
+      - "rkt"
+      - "fleet"
+    shell: /usr/bin/bash
