@@ -1,10 +1,9 @@
-#!Cloud-Config File 
+# cloud-config 
 # Defualt Password ~> Aguilar 
 
 users:
-
         -name: core
-        passwd: $1$1@lt$nS/HM1dYrL2ENNUputwPD1
+        passwd: $1$/CLwNbUJ$5lXSEwjkOBTBiJ3SCvc8k1
         groups:
                 -wheel
                 -docker
@@ -12,9 +11,10 @@ users:
                 -rkt
 
         -name: user
-        passwd: $1$1@lt$nS/HM1dYrL2ENNUputwPD1
+        passwd: $1$/CLwNbUJ$5lXSEwjkOBTBiJ3SCvc8k1
         groups:
                 -wheel
                 -docker
                 -fleet
                 -rkt
+
