@@ -1,10 +1,11 @@
 #cloud-config
 # Default Password ~> Aguilar
 
+hostname: "coreos"
 users:
   - name: core
     passwd: "$6$SALT$vQPyvfaiOLZKFkwFpfZyZGH5IiE4WMzAxYvcjwO8zR4X2N0Rck.uyoaBFR20ZN0NNaUddbTWZeZzmK58qM88F0"
-    groups: 
+    groups:
     - wheel
     - docker
     - fleet
