@@ -1,0 +1,12 @@
+[Unit]
+Description=Nginx Dockerized
+After=docker.service
+
+[Service]
+TimeOutSec=10
+ExecStartPre=-/usr/bin/docker kill nginx_server
+ExecStartPre=-/usr/bin/docker rm -f nginx_server 
+ExecStart=/usr/bin/docker run --name nginx_server --detach --publish 80:80 -P nginx
+
+[Install]
+WantedBy=multi-user.target
