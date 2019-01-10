@@ -1,0 +1,13 @@
+[Unit]
+Description=Running Wordpress in Docker Container
+After=docker.service
+
+[Service]
+TimeOutStartSec=10
+ExecStartPre=-/usr/bin/docker rm --force wordpress
+ExecStartPre=-/usr/bin/docker rm --force mysql-wordpress
+ExecStartPre=-/usr/bin/docker run --name mysql-wordpress --detach manguilar22/mysql-wordpress:wordpress
+ExecStart=/usr/bin/docker run --name wordpress --detach --link mysql-wordpress:mysql -P manguilar22/wordpress:wordpress 
+
+[Install]
+WantedBy=multi-user.targer
