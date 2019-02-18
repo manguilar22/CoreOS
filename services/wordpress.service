@@ -10,4 +10,4 @@ ExecStartPre=-/usr/bin/docker run --name mysql-wordpress --detach manguilar22/my
 ExecStart=/usr/bin/docker run --name wordpress --detach --link mysql-wordpress:mysql -P manguilar22/wordpress:wordpress 
 
 [Install]
-WantedBy=multi-user.targer
+WantedBy=multi-user.target
