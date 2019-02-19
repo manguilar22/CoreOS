@@ -4,8 +4,12 @@ After=mysql.service
 
 [Service]
 TimeOutStartSec=10
-Restart=Always
-ExecStart=/usr/bin/docker run --rm --name GOGS --publish 8300:300 --publish 8322:22 -v /srv/lxc/gogs/data:/data gogs/gogs:latest  
+ExecStartPre=-/usr/bin/docker kill mysql-wordpress
+ExecStartPre=-/usr/bin/docker kill wordpress
+ExecStartPre=-/usr/bin/docker rm -f mysql-wordpress
+ExecStartPre=-/usr/bin/docker rm -f wordpress
+ExecStartPre=-/usr/bin/docker run --name mysql-wordpress --detach manguilar22/mysql-wordpress:latest
+ExecStart=/usr/bin/docker run --name wordpress --detach --publish 8080:80 --link mysql-wordpress:mysql manguilar22/wordpress:latest 
 
 [Install]
-WantedBy=local.target
+WantedBy=multi-target.target

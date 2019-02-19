@@ -1,15 +1,11 @@
 [Unit]
-Description=Gogs server
-Requires=docker.service
+Description=Gogs Server
 After=mysql.service
 
 [Service]
-#Restart=always
 TimeOutStartSec=10
-ExecStartPre=-/usr/bin/docker kill GOGS
-ExecStartPre=-/usr/bin/docker rm -f GOGS
-ExecStart=/usr/bin/docker run --name GOGS --rm -p 8300:3000 -p 8322:22 -v /srv/lxc/gogs/data:/data gogs/gogs
-ExecStop=/usr/bin/docker stop GOGS
+Restart=Always
+ExecStart=/usr/bin/docker run --rm --name GOGS --publish 8300:3000 --publish 8322:22 -v /srv/lxc/gogs/data:/data gogs/gogs:latest  
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=local.target
