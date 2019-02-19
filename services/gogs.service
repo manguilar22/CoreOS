@@ -8,4 +8,4 @@ Restart=Always
 ExecStart=/usr/bin/docker run --rm --name GOGS --publish 8300:3000 --publish 8322:22 -v /srv/lxc/gogs/data:/data gogs/gogs:latest  
 
 [Install]
-WantedBy=local.target
+WantedBy=multi-user.target
