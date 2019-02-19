@@ -6,7 +6,7 @@ After=docker.service
 TimeOutStartSec=10
 ExecStartPre=-/usr/bin/docker kill mysql-gogs
 ExecStartPre=-/usr/bin/docker rm -f mysql-gogs
-ExecStart=/usr/bin/docker run --name mysql-gogs --detach --environment MYSQL_ROOT_PASSWORD=coreos --environment MYSQL_USER=goggy --environment MYSQL_DATABASE=gogs --environment MYSQL_PASSWORD=coreos mysql:5
+ExecStart=/usr/bin/docker run --name mysql-gogs --detach --env MYSQL_ROOT_PASSWORD=coreos --env MYSQL_USER=goggy --env MYSQL_DATABASE=gogs --env MYSQL_PASSWORD=coreos mysql:5
 ExecStop=/usr/bin/docker stop mysql-gogs
 
 [Install]
