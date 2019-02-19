@@ -1,5 +1,6 @@
 [Unit]
 Description=Gogs server
+Requires=docker.service
 After=mysql.service
 
 [Service]
