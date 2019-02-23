@@ -1,6 +1,6 @@
 [Unit]
 Description=Gogs Server
-After=mysql.service
+Requires=docker.service
 
 [Service]
 TimeOutStartSec=10
