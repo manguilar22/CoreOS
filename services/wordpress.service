@@ -8,7 +8,7 @@ ExecStartPre=-/usr/bin/docker kill mysql-wordpress
 ExecStartPre=-/usr/bin/docker kill wordpress
 ExecStartPre=-/usr/bin/docker rm -f mysql-wordpress
 ExecStartPre=-/usr/bin/docker rm -f wordpress
-ExecStartPre=-/usr/bin/docker run --name mysql-wordpress --detach manguilar22/mysql-wordpress:wordpress
-ExecStart=/usr/bin/docker run --name wordpress --detach --publish 8080:80 --link mysql-wordpress:mysql manguilar22/wordpress:wordpress
+ExecStartPre=-/usr/bin/docker run --name mysql-wordpress --detach manguilar22/mysql:wordpress-demo
+ExecStart=/usr/bin/docker run --name wordpress --detach --publish 8080:80 --link mysql-wordpress:mysql wordpress:latest
 [Install]
 WantedBy=multi-target.target
