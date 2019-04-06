@@ -5,6 +5,8 @@ Requires=docker.service
 [Service]
 TimeOutStartSec=10
 Restart=Always
+ExecStartPre=-/usr/bin/docker rm -f mysql-gogs
+ExecStartPre=-/usr/bin/docker rm -f GOGS
 ExecStartPre=-/usr/bin/docker run --rm --name mysql-gogs --detach manguilar22/mysql:gogs-demo
 ExecStart=/usr/bin/docker run --rm --name GOGS --publish 8300:3000 --publish 8322:22 -v /srv/lxc/gogs/data:/data gogs/gogs:latest  
 
