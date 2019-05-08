@@ -1,4 +1,4 @@
-# <img src="https://github.com/manguilar22/icons/blob/master/coreOS.png" width="50" height="50"/> CoreOS
+# <img src="https://cdn.freebiesupply.com/logos/large/2x/coreos-1-logo-png-transparent.png" width="50" height="50"/> CoreOS
 
 Configurations and Services
 
